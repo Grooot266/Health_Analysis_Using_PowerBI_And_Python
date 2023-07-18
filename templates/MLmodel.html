@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head><link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width,intial scale=1.0">	
+
+        <title>Predict</title>
+		</head>
+		<style type="text/css">
+			body{
+            margin: 0rem;		
+            padding: 0rem;
+        }
+		.bgimage{
+            background-image: url('https://1382778335.rsc.cdn77.org/wp-content/uploads/2022/09/XRHealth-Publishes-New-Study-Demonstrating-that-Virtual-Reality-Technology-is-Viable-in-Treating-Upper-Limb-Dysfunction-in-Multiple-Sclerosis-Patients.jpg');
+            background-size: 100% 110%;
+            width: 100%;
+            height: 200vh;
+			color:aliceblue;
+			font-family: 'Montserrat', sans-serif;
+        }
+		 .bgimage button{
+			background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            width: 15rem;	
+            font-family: 'Montserrat', sans-serif;	
+            margin-top: 2.5rem;		
+            border: .1rem solid white;
+            color: white;
+		 }
+
+		 .bgimage button :hover{
+			color:cyan;
+		 }
+
+		 .bgimage a{
+			text-decoration: none;
+            color: white;
+		 }
+		
+		</style>
+<body>
+
+<form action="{{url_for('MLmodel')}}" method="POST">
+	<div id="d11" class="bgimage">	
+
+		<label >Gender:-</label><br/>
+		<input type="radio" id="M" name="gender" value="1">
+		<label for="M">Male</label><br/>
+		<input type="radio" id="F" name="gender" value="0">
+		<label for="F">Female</label><br>
+
+		<br/><label >Age Group:-</label><br/>
+		<input type="radio" id="Ag1" name="age" value="0">
+		<label for="Ag1">15-20</label><br/>
+		<input type="radio" id="Ag2" name="age" value="1">
+		<label for="Ag2">21-30</label><br/>
+		<input type="radio" id="Ag3" name="age" value="2">
+		<label for="Ag3">31-40</label><br/>
+		<input type="radio" id="Ag4" name="age" value="3">
+		<label for="Ag4">41-60</label><br/>
+		<input type="radio" id="Ag5" name="age" value="4">
+		<label for="Ag5">Above 60</label><br/>
+
+		<br/><label>Select your region of residence:-</label><br/>
+		<input type="radio" id="R1" name="region" value="0">
+		<label for="R1">Mumbai</label><br/>
+		<input type="radio" id="R2" name="region" value="1">
+		<label for="R2">Navi Mumbai</label><br/>
+		<input type="radio" id="R3" name="region" value="3">
+		<label for="R3">Thane</label><br/>
+		<input type="radio" id="R4" name="region" value="2">
+		<label for="R4">Other</label><br/>
+
+		<br/><label >How often do you get a health checkup ? </label><br/>
+		<input type="radio" id="HC1" name="healthcheckup" value="1">
+		<label for="HC1">Once in 3 months</label><br/>
+		<input type="radio" id="HC2" name="healthcheckup" value="2">
+		<label for="HC2">Once in 6 months</label><br/>
+		<input type="radio" id="HC3" name="healthcheckup" value="3">
+		<label for="HC3">Only when needed</label><br/>
+		<input type="radio" id="HC4" name="healthcheckup" value="0">
+		<label for="HC4">Never get it done</label><br/>
+
+
+		<br/><label>On a scale of 1-10, how healthy do you consider yourself ?</label><br/>
+		<input type="radio" id="HS1" name="healthscale" value="0">
+		<label for="HS1">0-3</label><br/>
+		<input type="radio" id="HS2" name="healthscale" value="1">
+		<label for="HS2">4-7</label><br/>
+		<input type="radio" id="HS3" name="healthscale" value="2">
+		<label for="HS3">8-10</label><br/>
+
+		<br/><label>In your opinion, at what capacity can you perform everyday activities ?</label><br/>
+		<input type="radio" id="C1" name="capacity" value="0">
+		<label for="C1">Excellent capacity</label><br/>
+		<input type="radio" id="C2" name="capacity" value="1">
+		<label for="C2">Good capacity</label><br/>
+		<input type="radio" id="C3" name="capacity" value="2">
+		<label for="C3">Moderate capacity</label><br/>
+
+		<br/><label>What would be your average daily step count ?</label><br/>
+		<input type="radio" id="SC1" name="stepcount" value="0">
+		<label for="SC1">1000-5000</label><br/>
+		<input type="radio" id="SC2" name="stepcount" value="1">
+		<label for="SC2">5000-10000</label><br/>
+		<input type="radio" id="SC3" name="stepcount" value="2">
+		<label for="SC3">10000-15000</label><br/>
+		<input type="radio" id="SC4" name="stepcount" value="3">
+		<label for="SC4"> More than 15000</label><br/>
+
+		<br/><label >How much hours of sleep do you get on a daily basis ?</label><br/>
+		<input type="radio" id="SH1" name="sleephrs" value="0">
+		<label for="SH1">Less than 6 hours</label><br/>
+		<input type="radio" id="SH2" name="sleephrs" value="1">
+		<label for="SH2">8 hours</label><br/>
+		<input type="radio" id="SH3" name="sleephrs" value="2">
+		<label for="SH3">More than 8 hours</label><br/>
+
+		<br/><label >Do you experience any chronic pain ?</label><br/>
+		<input type="radio" id="CP1" name="chronicpain" value="1">
+		<label for="CP1">Yes</label><br/>
+		<input type="radio" id="CP2" name="chronicpain" value="0">
+		<label for="CP2">No</label><br/>
+
+		<br/><label >Do you have any hereditary conditions/ diseases ?</label><br/>
+		<input type="radio" id="D1" name="Diseases" value="0">
+		<label for="D1">Diabetes</label><br/>
+		<input type="radio" id="D2" name="Diseases" value="1">
+		<label for="D2">High blood pressure</label><br/>
+		<input type="radio" id="D3" name="Diseases" value="2">
+		<label for="D3">Hyperlipidemia (Cholesterol)</label><br/>
+		<input type="radio" id="D4" name="Diseases" value="3">
+		<label for="D4">None</label><br/>
+
+		<br/><label >Are you habituated to alcohol/drugs ?</label><br/>
+		<input type="radio" id="AD1" name="Addiction" value="0">
+		<label for="AD1">Only to alcohol</label><br/>
+		<input type="radio" id="AD2" name="Addiction" value="1">
+		<label for="AD2">Only to drugs</label><br/>
+		<input type="radio" id="AD3" name="Addiction" value="2">
+		<label for="AD3">None</label><br/>
+
+		<br/><label >Are you involved in any extracurricular activity (sports/dance/music) ?</label><br/>
+		<input type="radio" id="AC1" name="Activities" value="1">
+		<label for="AC1">Yes</label><br/>
+		<input type="radio" id="AC2" name="Activities" value="0">
+		<label for="AC2">No</label><br/>
+
+		<br/><label >Does your mental well being has an affect on your physical health ?</label><br/>
+		<input type="radio" id="MH1" name="mentalhealth" value="1">
+		<label for="MH1">Yes</label><br/>
+		<input type="radio" id="MH2" name="mentalhealth" value="0">
+		<label for="MH2">No</label><br/>
+
+		<br/><label>Do you have a health insurance ?</label><br/>
+		<input type="radio" id="I1" name="Insurance" value="1">
+		<label for="I1">Yes</label><br/>
+		<input type="radio" id="I2" name="Insurance" value="0">
+		<label for="I2">No</label><br/>
+
+		<br/><button inputmode="submit" value="submit"> Submit </button>
+
+	</div>
+</form>
+</body>
+</html>

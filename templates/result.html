@@ -1,0 +1,74 @@
+<html>
+    <head><link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width,intial scale=1.0">	
+
+        <title>Result</title>
+    </head>
+    <style type="text/css">
+        body{
+        margin: 0rem;		
+        padding: 0rem;
+        background-color: rgba(0, 176, 240, 0.33);
+    }
+
+        .gg h1{
+            color:darkblue;
+			font-family: 'Montserrat', sans-serif;
+     }
+
+     .gg button{
+            background-color: transparent;
+            border: none;
+            font-size: 1.0rem;
+            text-transform: uppercase;
+            width: 10rem;	
+            font-family: 'Montserrat', sans-serif;	
+            margin-top: 2.5rem;		
+            border: .1rem solid rgb(1, 129, 250);
+            color: darkcyan;
+        }
+        .gg button :hover{
+			color:darkblue;
+		 }
+
+        .gg a{
+			text-decoration: none;
+            color: white;
+		 }
+        
+
+    </style>
+    <body >
+        <div class ="gg">
+             <center>
+           
+                <h1>Prediction Result:-</h1>
+
+                <label id="r1" style="color: darkcyan; font-size: larger; font-family: 'Montserrat', sans-serif;" placeholder="result" ></label>
+
+                {% if data == 0 %}
+                <r1>Good physical health </r1>
+
+                {% endif %}
+
+                {% if data == 1 %}
+                <r1>Moderate physical health </r1>
+            
+                {% endif %}
+                {% if data == 2 %}
+                <r1>bad physical health </r1>
+
+                {% endif %}
+
+                <br><br>
+
+                <h1>Decision Tree Output:-</h1>
+                <img src="{{user_image}}" alt="decision_tree " height="500px" width="1000px">
+
+                <br><br>
+                <button ><a href="/">Back to home</a></button>
+            </center>
+        </div>
+    </body>
+</html>

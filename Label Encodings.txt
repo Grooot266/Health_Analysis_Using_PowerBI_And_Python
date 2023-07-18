@@ -1,0 +1,74 @@
+1)	Gender:-  Male=1	female=0
+
+2)	Age group:- 15-20=0	21-30=1  
+	       	    31-40=2	41-60=3
+	    	    above 60=4
+
+3)	Region:-    Other=2	Navi_mumbai=1	
+	 	    Mumbai=0	Thane=3	
+
+
+
+4)	Health_checkup?:- Once in 3 months=1
+		  	  Once in 6 months=2
+		  	  Only when needed=3
+		  	  Never get it done=0
+
+5)	health_scale:-  0-3=0
+			4-7=1
+			8-10=2
+		
+	      
+	      
+
+6)	Capacity?:- Excellent capacity=0
+	    	    Good capacity=1
+	    	    Moderate capacity=2
+
+
+
+7)	Step_count?:- 1000-5000=0
+	  	      5000-10000=2
+	      	      10000-15000=1
+	              More than 15000=3
+
+8)	Sleep_hrs?:- Less than 6 hours=1
+  	     	     8 hours=0
+	     	     More than 8 hours=2
+
+9)	Chronic_pain?:- Yes=1
+			No=0
+
+10)	Diseases?:- Diabetes=0
+	    	    High blood pressure=3
+	    	    Hyperlipidemia (Cholesterol)=2
+	    	    Others=3
+
+11)	Addiction?:- Only to alcohol=1
+	     	     Only to drugs=2
+	     	     None=0
+
+
+
+
+12)	Activities?:- Yes=1
+	      	      No=0
+
+
+13)	Mental_health?:- Yes=1
+			 No=0
+
+14)	Insurance?:- Yes=1
+   	 	     No=0
+
+15)	physical_health:- In good physical health=0
+		  	  Mildly physically impaired=1
+			  Moderately physically impaired=2
+
+
+
+
+
+
+
+
