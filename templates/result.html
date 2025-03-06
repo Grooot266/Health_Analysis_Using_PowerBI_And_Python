@@ -17,7 +17,7 @@
 			font-family: 'Montserrat', sans-serif;
      }
 
-     .gg button{
+        .gg button{
             background-color: transparent;
             border: none;
             font-size: 1.0rem;
@@ -42,6 +42,22 @@
     <body >
         <div class ="gg">
              <center>
+               
+                <h1 id="mdl">{% if SML == '1' %}
+                     <mdl>CART Model</mdl></h1>
+                    {% endif %}
+                <h1 id="mdl">{% if SML == '2' %}
+                    <mdl>C4.5 Model</mdl></h1>
+                    {% endif %}
+                <h1 id="mdl">{% if SML == '3' %}
+                    <mdl>Random forest classifier Model</mdl></h1>
+                    {% endif %}
+                <h1 id="mdl">{% if SML == '4' %}
+                    <mdl>Gradient Boosting Classifier Model</mdl></h1>
+                    {% endif %}
+                   
+                   
+                   
            
                 <h1>Prediction Result:-</h1>
 

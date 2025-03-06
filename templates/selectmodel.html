@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head><link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width,intial scale=1.0">	
+
+        <title>Select</title>
+	</head>
+	<style type="text/css">
+     
+     body {
+    background-image: url('static\\img\\Home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 600px;
+    max-height: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.smp {
+    text-align: center;
+    font-size: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+
+button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: 1px solid black;
+    font-size: medium;
+    font-style: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00ffff;
+}
+
+
+    
+        
+    
+        @media(max-width: 768px){
+            html{
+                font-size: 35%;
+            }
+    
+        }
+    
+        @media(max-width: 640px){
+            html{
+                font-size: 30%;
+            }
+    
+        }
+    
+        @media(max-width: 540px){
+            html{
+                font-size: 20%;
+            }
+    
+        }
+    
+        @media(max-width: 425px){
+            html{
+                font-size: 22%;
+            }
+    
+        }
+    
+        @media(max-width: 411px){
+            html{
+                font-size: 20%;
+            }
+    
+        }
+    
+    
+        @media(max-width: 375px){
+            html{
+                font-size: 15%;
+            }
+    
+        }
+	</style>
+<body>
+    <form action="{{url_for('selectmodel')}}" method="POST">
+        <div id="SL1" class="smp">
+            <br/><label>Select any one model from below :-</label><br/>
+            <input type="radio" id="ML1" name="Model" value="1">
+		    <label for="ML1">CART Model</label><br/>
+		    <input type="radio" id="ML2" name="Model" value="2">
+		    <label for="ML2">C4.5 Model</label><br/>
+            <input type="radio" id="ML3" name="Model" value="3">
+		    <label for="ML3">Random Forest Classifier Model</label><br/>
+		    <input type="radio" id="ML4" name="Model" value="4">
+		    <label for="ML4">Gradient Boosting Classifier Model</label><br/>
+            <br/><button inputmode="submit" value="submit" id="s1"> Submit </button>
+        </div>
+    </form>
+</body>
+</html>
