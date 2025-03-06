@@ -1,0 +1,8 @@
+<br/><label id="L5">Health Scale:-</label>
+		<input type="number" id="I5" name="health_scale"><br/>
+
+		<br/><label id="L6">Capacity ? :-</label>
+		<input type="number" id="I6" name="capacity"><br/>
+
+		<br/><label id="L7">Step count ? :-</label>
+		<input type="number" id="I7" name="step_count"><br/>
