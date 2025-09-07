@@ -3,7 +3,7 @@ The aim of the project was to do analysis on the data
 collected through Google form based on the health problems of people. Analysis was
 done according to particular region and diseases. Visualization of the data was done
 using Microsoft Power Bi tool. In this project with the help of machine learning
-algorithm we will predict an outcome from the collected data. Machine Learning algorithms are the programs that can learn the hidden patterns from the data, predict
+algorithm we will predict an outcome from the collected data. Machine Learning algorithms are the programs that can learn the hidden patterns from the data, predict
 the output, and improve the performance from experiences on their own.
 
 
